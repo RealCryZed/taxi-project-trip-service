@@ -1,5 +1,6 @@
 package com.realcryzed.trip.model;
 
+import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,6 +21,7 @@ public class Trip {
     private int tripId;
     private String startPoint;
     private String endPoint;
+    @NotNull
     private int userId;
     private int driverId;
 }

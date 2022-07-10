@@ -19,11 +19,6 @@ public class TripController {
         return tripService.addTrip(trip);
     }
 
-//    @GetMapping("/trip/{id}")
-//    public Trip getTripById(@PathVariable Integer id) {
-//        return tripService.getTripByTripId(id);
-//    }
-
     @GetMapping("/trips")
     public List<Trip> getAllTrips() {
         return tripService.getAllTrips();
