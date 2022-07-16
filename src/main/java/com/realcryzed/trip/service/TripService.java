@@ -42,13 +42,13 @@ public class TripService {
         Driver driver = new Driver();
         try {
             user =
-                    restTemplate.getForObject("http://localhost:10001/user/" + trip.getUserId(),
+                    restTemplate.getForObject("http://USER-SERVICE/user/" + trip.getUserId(),
                             User.class);
         } catch (Exception e) {log.error("User not found");}
 
         try {
             driver =
-                    restTemplate.getForObject("http://localhost:10002/driver/" + trip.getDriverId(),
+                    restTemplate.getForObject("http://DRIVER-SERVICE/driver/" + trip.getDriverId(),
                             Driver.class);
         } catch (Exception e) {log.error("Driver not found");}
 
